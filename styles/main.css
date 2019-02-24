@@ -620,6 +620,9 @@ div .headline {
 .sort_button {
   font-size: 17px; }
 
+.firstCollumn {
+  border-right: 2px #3c3c3c solid; }
+
 .avatar {
   float: left;
   width: 42px;
