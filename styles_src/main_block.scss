@@ -80,20 +80,22 @@ div .headline {
     margin: 10px auto 10px auto;
 }
 
-.streams_sort h2 {
+.sort_by {
     display: inline-block;
+    font-size: 15px;
+    margin-right: 15px;
 }
 
 .sort_button {
-    
+        margin: 10px 0;
         border-radius: 5px;
         background-color: rgb(49, 49, 49);
         width: 94px;
         height: 23px;
         padding:  4px 12px 4px 12px;
-
-    
-      
+}
+.sort_button {
+    font-size: 17px;
 }
 
 .avatar {
