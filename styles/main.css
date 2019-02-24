@@ -614,6 +614,9 @@ div .headline {
   height: 23px;
   padding: 4px 12px 4px 12px; }
 
+.sort_button:hover {
+  background-color: #3e3e3e; }
+
 .sort_button {
   font-size: 17px; }
 
