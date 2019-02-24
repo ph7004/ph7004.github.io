@@ -618,6 +618,16 @@ div .headline {
           align-items: flex-end;
   margin: 10px auto 10px auto; }
 
+.streams_sort h2 {
+  display: inline-block; }
+
+.sort_button {
+  border-radius: 5px;
+  background-color: #313131;
+  width: 94px;
+  height: 23px;
+  padding: 4px 12px 4px 12px; }
+
 .avatar {
   float: left;
   width: 42px;
