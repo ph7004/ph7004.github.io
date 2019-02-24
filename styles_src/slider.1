@@ -1,0 +1,100 @@
+.slider {
+    margin: 40px auto;
+    
+    
+}
+    
+img:after { 
+        color: #fff;
+        display: block;
+        padding: 20px;
+        border-radius: 6px;
+        width: 100%;
+        border: 3px pink solid;
+        content: "ТЕКСТ";
+    }
+
+
+.flex_slider {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 50px auto;
+    justify-content: center;
+    
+    // max-width: 1000px
+    // width: 80%
+}
+ 
+.slider_game {
+    margin: 0 10px;
+    align-self: center;
+    
+    transition: all 0.4s ease;
+}
+  
+
+.slider_game_logo {
+    position: relative;
+    top: -83px;
+    right: -37px;
+    
+}
+ 
+
+.game_div {
+    display: flex;
+    margin-right: 20px;
+    
+    width: 92px;
+}
+
+
+
+// .slider_game:hover 
+//     flex: 2 1 50px
+//     border: 1px pink solid
+//     transform: scale(1.2,1.2)   
+// 
+
+// .img_3 
+//     width: 93px
+//     height: 145px
+//     background-image: url(/img/games/1/csgo.png)
+//     background-repeat: no-repeat
+// 
+
+@media (max-width: 750px) { 
+
+    .slider_game {
+        margin: 0;
+        transform: scale(0.8,0.8);
+        
+    }
+}
+
+
+// .game1:hover {
+    
+//     flex: 2 1 50px;    
+//     border: 1px pink solid;
+//     transform: scale(1.2,1.2) ; 
+    
+// }
+    
+.activeGame {
+    transform: scale(1.1,1.1) !important;
+
+}
+ 
+.secondGame {
+    transform: scale(0.9,0.9) !important;
+    margin: 0 15px !important;
+}
+
+.theirdGame {
+    transform: scale(0.8,0.8) !important;
+}
+
+.otherGame {
+    transform: scale(0.7,0.7) !important;
+}

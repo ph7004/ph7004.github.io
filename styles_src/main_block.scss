@@ -1,14 +1,13 @@
 .main_block {
     display: grid;
     grid-template-columns: 66.667% 33.334%;
-    grid-template-rows: 40px auto;
+    grid-template-rows: auto;
     column-gap: 10px;
     width: 90%;
     margin: 40px auto;
 }
 
-
-.streams {
+.stream {
     align-self: stretch;
     margin-top: 20px;
 }
@@ -18,12 +17,12 @@
     margin-top: 20px;
 }
 
-.headline {
+div .headline {
     font-size: 20px;
 }
 
-
 .streams_grid {
+    align-self: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -42,30 +41,78 @@
 }
 
 .stream_item {
-    width: 45%;
-    height: 200px; //auto
-    max-height: 174px;
+    margin: 10px;
+    height: 200px;
+}
+
+.stream_info,
+.block_viewers,
+.gameName {
+    font-family: 'Raleway_Bold';
+}
+
+.block_viewers {
+    font-size: 12PX;
+}
+
+.streamName {
+    margin: 3px 0 0 5px;
+    font-size: 18px;
+    font-family: 'raleway-bold';
+}
+
+.channelName,
+.gameName {
+    margin: 3px 0 0 5px;
+    font-size: 13px;
+    font-family: 'raleway-bold';
+    color: #335da9;
+}
+
+.stream {
+    width: 243px;
+    height: 141px; //auto
+    display: flex;
+    align-items: flex-end;
+
     margin: 10px auto 10px auto;
-    background-color: beige;
+}
+
+.avatar {
+    float: left;
+    width: 42px;
+    height: 42px;
+    margin-right: 10px;
+    background-image: url("/img/previews/avatar.png");
+    background-size: 100%;
 }
 
 @media (min-width: 1275px) {
-    .stream_item {
-        width: 32%;
-        height: 200px; //auto
-        max-height: 200px;
+    .stream {   
+        //height: auto;
+        min-height: 141px; //auto
+        min-width: 243px;
         margin: 10px auto 10px auto;
-        background-color: rgb(64, 35, 90);
         
     }
 }
 
 @media (max-width: 750px) {
-    .stream_item {
-        width: 90%;
-        height: 200px; //auto
-        max-height: 200px;
+    .stream {
+        min-height: 141px; //auto
+        min-width: 243px;
         margin: 10px auto 10px;
-        background-color: rgb(64, 35, 90); 
+    }
+    .main_block {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .streams_grid {
+        justify-content: center !important;
+    }
+
+    .secondCollumn {
+        display: none;
     }
 }

@@ -18,17 +18,13 @@ flex_slider.onmouseover = function (evt) {
     clearTimeout(mouseTimeOut);
 
     scrollTimeOut = setTimeout(function () {
-        // перед тем, как зайти в новый элемент, курсор всегда выходит из предыдущего
-        //
-        // если мы еще не вышли, значит это переход внутри элемента, отфильтруем его
+
         if (cursorIsOn) {
             return;
         }
 
-        // посмотрим, куда пришёл курсор
         target = evt.target;
-        // уж не на TD ли?
-        // да, элемент перешёл внутрь TD!
+
         while (target != this) {
             if (target.tagName == 'HTML') return;
             if (target.classList.contains('slider_game')) { break;} 
@@ -39,8 +35,8 @@ flex_slider.onmouseover = function (evt) {
         gameCounterElement = cursorIsOn.parentNode;
         gameCounterElement = gameCounterElement.nextSibling;
         gameCounterElement = gameCounterElement.nextSibling;
-        console.log('onmouseover work');
-        // cursorIsOn.parentNode.setAttribute("data-after", gameCounter);
+
+        
         animateGames(cursorIsOn);
     }, 50);
 };
@@ -52,22 +48,21 @@ flex_slider.onmouseout = function (event) {
     clearTimeout(mouseTimeOut);
 
     scrollTimeOut = setTimeout(function () {
-        // если курсор и так снаружи - игнорируем это событие
+  
         if (!cursorIsOn) return;
 
-        // произошёл уход с элемента - проверим, куда, может быть на потомка?
+
         var relatedTarget = event.relatedTarget;
-        if (relatedTarget) { // может быть relatedTarget = null
+        if (relatedTarget) { 
             while (relatedTarget) {
-                // идём по цепочке родителей и проверяем,
-                // если переход внутрь currentElem - игнорируем это событие
+
                 if (relatedTarget == cursorIsOn) return;
                 relatedTarget = relatedTarget.parentNode;
             }
         }
 
-        // произошло событие mouseout, курсор ушёл
-        console.log('onmouseout work')
+
+
         antiAnimateGames(cursorIsOn);
         cursorIsOn = null;
     }, 50);
@@ -83,7 +78,7 @@ flex_slider.onmouseout = function (event) {
 
     _gameCounter(gameCounterElement);
     time = setInterval(function tick() {
-        // element.parentNode.setAttribute("data-after", gameCounter);
+
         _gameCounter(gameCounterElement);    
     }, 1000);
     
@@ -152,8 +147,7 @@ function antiAnimateGames (element) {
 
 
 function _gameCounter(element, delInfo) {
-    // setInterval(function() {
-        // bolean = bolean || true;
+
         if(delInfo) {
             element.textContent = "";
             delInfo = false;
@@ -162,31 +156,6 @@ function _gameCounter(element, delInfo) {
         var games = Math.random();
         var streams = Math.random();
         gameCounter = 'СТРИМЫ: '+ streams.toFixed(1)*100 + ' ИГРЫ: ' + games.toFixed(1)*100;
-        // }, 1000);
         if(!element) return;
         element.textContent = gameCounter;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  var el = document.getElementsByClassName('flex_slider')[0].firstChild;
-      i = 2;
-  
-  console.group('Siblings of div-1:');
-  
-  while (el) {
-    console.log(i + '. '+ el.nodeName);
-    el = el.nextSibling;
-    i++;
-  };

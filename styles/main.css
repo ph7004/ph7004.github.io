@@ -229,7 +229,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   border: 0;
   color: #a5a5a5; }
@@ -371,8 +370,7 @@ img:after {
   width: 100%;
   border: 3px pink solid; }
 
-.slider_game,
-div {
+.slider_game {
   margin: 0;
   -ms-flex-item-align: center;
       align-self: center;
@@ -484,8 +482,15 @@ div {
 .lines {
   display: inline-block; }
 
-.button {
-  display: inline; }
+.streams_sort {
+  width: 100%; }
+
+.sort {
+  display: inline-block;
+  margin: 15px 0; }
+
+.sort_buttons {
+  display: inline-block; }
 
 .arrow {
   display: inline-block;
@@ -532,13 +537,13 @@ div {
 .main_block {
   display: grid;
   grid-template-columns: 66.667% 33.334%;
-  grid-template-rows: 40px auto;
+  grid-template-rows: auto;
   -webkit-column-gap: 10px;
           column-gap: 10px;
   width: 90%;
   margin: 40px auto; }
 
-.streams {
+.stream {
   -ms-flex-item-align: stretch;
       align-self: stretch;
   margin-top: 20px; }
@@ -548,10 +553,12 @@ div {
       align-self: stretch;
   margin-top: 20px; }
 
-.headline {
+div .headline {
   font-size: 20px; }
 
 .streams_grid {
+  -ms-flex-item-align: auto;
+      align-self: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,24 +582,65 @@ div {
   margin-top: 10px; }
 
 .stream_item {
-  width: 45%;
-  height: 200px;
-  max-height: 174px;
-  margin: 10px auto 10px auto;
-  background-color: beige; }
+  margin: 10px;
+  height: 200px; }
+
+.stream_info,
+.block_viewers,
+.gameName {
+  font-family: 'Raleway_Bold'; }
+
+.block_viewers {
+  font-size: 12PX; }
+
+.streamName {
+  margin: 3px 0 0 5px;
+  font-size: 18px;
+  font-family: 'raleway-bold'; }
+
+.channelName,
+.gameName {
+  margin: 3px 0 0 5px;
+  font-size: 13px;
+  font-family: 'raleway-bold';
+  color: #335da9; }
+
+.stream {
+  width: 243px;
+  height: 141px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 10px auto 10px auto; }
+
+.avatar {
+  float: left;
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+  background-image: url("/img/previews/avatar.png");
+  background-size: 100%; }
 
 @media (min-width: 1275px) {
-  .stream_item {
-    width: 32%;
-    height: 200px;
-    max-height: 200px;
-    margin: 10px auto 10px auto;
-    background-color: #40235a; } }
+  .stream {
+    min-height: 141px;
+    min-width: 243px;
+    margin: 10px auto 10px auto; } }
 
 @media (max-width: 750px) {
-  .stream_item {
-    width: 90%;
-    height: 200px;
-    max-height: 200px;
-    margin: 10px auto 10px;
-    background-color: #40235a; } }
+  .stream {
+    min-height: 141px;
+    min-width: 243px;
+    margin: 10px auto 10px; }
+  .main_block {
+    display: grid;
+    grid-template-columns: 100%; }
+  .streams_grid {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important; }
+  .secondCollumn {
+    display: none; } }
