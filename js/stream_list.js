@@ -49,7 +49,7 @@
         var to = from + PAGE_SIZE;
         var pageStreams = streams.slice(from, to);
 
-        // 1. перебрать все элементы в структуре данных
+        
         pageStreams.forEach(function (stream) {
             var streamElement = new Stream(stream);
             streamElement.render();
@@ -70,7 +70,7 @@
             var loadedStreams = JSON.parse(rawData);
             streams = loadedStreams;
             filteredStreams = streams.slice(0);
-            // Обработка загруженных данных (отрисовка)
+            
             renderStreams(loadedStreams, 0);
         };
 

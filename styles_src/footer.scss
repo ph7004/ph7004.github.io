@@ -1,3 +1,80 @@
+.footer {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.footer_flexbox {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+ul.soc_buttons_footer li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 60px;
+    // margin-left: 20px;
+}
+
+.soc_buttons {
+    display: inline;
+    font-family: "Font Awesome 5 Brands";
+    margin-left: 45px;
+}
+
 .soc_footer {
-    margin: 30px auto;
+    margin: 10px auto;
+    font-size: 34px;
+}
+
+.line_footer {
+    height: 2px;
+    width: 100%;
+    margin: 10px auto;
+    background-color: #3c3c3c;
+}
+.footer_logo{
+    margin: 10px;
+}
+
+
+.footer_buttons {
+    width: 265px;
+    height: 25px;
+    align-self: center;
+    
+}
+
+.button_1 {
+    border-radius: 15px;
+    background-color: rgb(98, 98, 98);
+    width: 108px;
+    height: 25px;
+    margin-right: 10px;
+    padding: 5px 23px;
+    font-family: 'raleway-bold';
+}
+
+.button_2 {
+    border-radius: 15px;
+    background-color: #006646;
+    width: 108px;
+    height: 25px;
+    padding: 5px 23px;
+    font-family: 'raleway-bold';
+  }
+
+.footer_icons {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+    font-size: 34px;
+}
+
+
+.bottom_line_footer {
+    width: 300px;
+    margin: 20px auto;
+    font-family: 'raleway-light';
+    font-size: 15px;
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 header {
   margin: 0 auto;
   overflow: hidden;
@@ -498,40 +497,21 @@ img:after {
   -webkit-transition: rotate(45eg);
   transition: rotate(45eg); }
 
-.title {
-  /* чтобы линии не выходили за ширину блока заголовка */ }
-
 .title:before,
 .title:after {
   content: '';
-  /* делаем линию строчно-блочной */
   display: inline-block;
-  /* выравниваем вертикально по середине */
   vertical-align: middle;
-  /* не позволяем ширине превысить 100% (будет добавлен бордюр) */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  /* установка ширины в 100% делает линию равной ширине тега заголовка
-    ** благодаря этому линия заполнит все свободное пространство
-    ** слева и справа от текста
-    */
   width: 100%;
   height: 2px;
-  background: #3c3c3c;
-  /* добавляем к линии левый и правый бордюр цветом основного фона заголовка
-    ** благодаря этому создается нужный отступ между линиями и текстом
-    */ }
+  background: #3c3c3c; }
 
 .title:before {
-  /* смещаем левую линию влево отрицательным отступом, равным 100% ширины
-    ** благодаря этому линия встает слева от текста
-    */
   margin-left: -100%; }
 
 .title:after {
-  /* смещаем правую линию вправо отрицательным отступом, равным 100% ширины
-    ** благодаря этому линия встает справа от текста
-    */
   margin-right: -100%; }
 
 .main_block {
@@ -576,6 +556,7 @@ div .headline {
 
 .test_annonce {
   background-color: #8d8d8d;
+  opacity: 0.5;
   height: 80px;
   width: 90%;
   margin: 15px auto 0 0; }
@@ -656,3 +637,72 @@ div .headline {
             justify-content: center !important; }
   .secondCollumn {
     display: none; } }
+
+.footer {
+  width: 90%;
+  margin: 10px auto; }
+
+.footer_flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 0 auto; }
+
+ul.soc_buttons_footer li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 60px; }
+
+.soc_buttons {
+  display: inline;
+  font-family: "Font Awesome 5 Brands";
+  margin-left: 45px; }
+
+.soc_footer {
+  margin: 10px auto;
+  font-size: 34px; }
+
+.line_footer {
+  height: 2px;
+  width: 100%;
+  margin: 10px auto;
+  background-color: #3c3c3c; }
+
+.footer_logo {
+  margin: 10px; }
+
+.footer_buttons {
+  width: 265px;
+  height: 25px;
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+.button_1 {
+  border-radius: 15px;
+  background-color: #626262;
+  width: 108px;
+  height: 25px;
+  margin-right: 10px;
+  padding: 5px 23px;
+  font-family: 'raleway-bold'; }
+
+.button_2 {
+  border-radius: 15px;
+  background-color: #006646;
+  width: 108px;
+  height: 25px;
+  padding: 5px 23px;
+  font-family: 'raleway-bold'; }
+
+.footer_icons {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  font-size: 34px; }
+
+.bottom_line_footer {
+  width: 300px;
+  margin: 20px auto;
+  font-family: 'raleway-light';
+  font-size: 15px; }

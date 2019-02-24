@@ -20,7 +20,7 @@
         this.element.querySelector('.streamName').textContent = this._data.streamName;
         this.element.querySelector('.channelName').textContent = this._data.channelName;
         this.element.querySelector('.viewers').textContent = this._data.view;
-        this.element.querySelector('.gameName').textContent = this._data.gameName;
+        this.element.querySelector('.gameName').textContent = this._data.gameName;  
         this._BG = this.element.querySelector('.stream');
 
         var backgroundImage = new Image();
