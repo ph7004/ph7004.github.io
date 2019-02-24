@@ -570,7 +570,9 @@ div .headline {
       -ms-flex-pack: start;
           justify-content: flex-start;
   background: -webkit-gradient(linear, left bottom, left top, from(#202325), to(rgba(125, 185, 232, 0)));
-  background: linear-gradient(to top, #202325 0%, rgba(125, 185, 232, 0) 100%); }
+  background: linear-gradient(to top, #202325 0%, rgba(125, 185, 232, 0) 100%);
+  -webkit-padding-after: 20px;
+          padding-block-end: 20px; }
 
 .test_annonce {
   background-color: #8d8d8d;

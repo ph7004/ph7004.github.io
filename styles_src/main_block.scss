@@ -27,6 +27,7 @@ div .headline {
     flex-flow: row wrap;
     justify-content: flex-start;
     background: linear-gradient(to top, rgb(32, 35, 37) 0%,rgba(125,185,232,0) 100%);
+    padding-block-end: 20px;
 }
 
 .test_annonce {
